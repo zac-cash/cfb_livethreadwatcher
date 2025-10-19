@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Comments Live Feed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="reddit-icon">█</span>
+                    Reddit Comments Feed
+                </h1>
+                <div class="controls">
+                    <select id="refreshInterval" class="refresh-interval-select">
+                        <option value="3">3s</option>
+                        <option value="6">6s</option>
+                        <option value="9">9s</option>
+                    </select>
+                    <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Theme">
+                        <span class="theme-icon">◐</span>
+                    </button>
+                    <button id="refreshBtn" class="refresh-btn">
+                        <span class="refresh-icon">↻</span>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="posts-container" id="postsContainer">
+                <div class="loading" id="loadingIndicator">
+                    <div class="loading-spinner"></div>
+                    <p>Loading Reddit comments...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
