@@ -364,7 +364,7 @@ body {
     color: var(--text-accent);
     font-weight: 600;
     white-space: nowrap;
-    max-width: 120px;
+    max-width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
 }

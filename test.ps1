@@ -54,7 +54,7 @@ function update-redditdata {
     $content.data | select-object id, parent_id, created, author, body, ups, $flairURLs, $flairtext, replies, repliesParsed, repliesCount | ForEach-Object {
         $newdata.Add($_)
     }
-    $newdata | where-object { $_.replies.data -ne $null } | ForEach-Object {
+    $newdata | where-object { $null -ne $_.replies.data } | ForEach-Object {
         $_.repliesCount = $_.replies.data.children.Count
         $_.repliesParsed = $_.replies.data.children.data | select-object id, parent_id, created, author, body, ups, $flairURLs, $flairtext
         $_.replies = $null
